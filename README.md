@@ -1,4 +1,7 @@
-# easy-cors-fix
-A proxy server to make life easier for developers wanting to practice fetch, get, async/await, promises, etc., without  having to deal with CORS errors
+# stats-vinmonopolet
 
-This software is thoroughly documented with a line by line walk-through. Read the documentation here https://fcc-docs.herokuapp.com/ for a deep-dive explanation.
+A web application for getting statitistics for vinmonpolet sales. 
+
+Future plans include ways of viewing if and how much sales at the Norwegian Liquor stores increased during the Corona pandemic (when the border was closed), and if so, how much did they increase by.
+
+This will give an insight into how much additional tax revenue was generated when the population could not by alcohol in the much cheaper neighboring countries.

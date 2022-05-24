@@ -26,6 +26,7 @@ const sendFetchViaServer =(e)=>{
 
 
   const form = document.getElementById('main-form')
-  form.addEventListener('submit', testFunction)
+  // form.addEventListener('submit', testFunction)
+  form.addEventListener('submit', sendFetchViaServer)
 
 

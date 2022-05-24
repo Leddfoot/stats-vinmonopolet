@@ -1,15 +1,27 @@
 {
-  "name": "corsfix",
+  "name": "stats-vinmonopolet",
   "version": "1.0.0",
-  "description": "",
+  "description": "A web application for getting statitistics for vinmonpolet sales.",
   "main": "index.js",
   "scripts": {
     "startserver": "node ./server/server.js"
   },
   "author": "Thomas Godwin",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
     "node-fetch": "^3.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leddfoot/stats-vinmonopolet.git"
+  },
+  "keywords": [
+    "sales",
+    "statistics"
+  ],
+  "bugs": {
+    "url": "https://github.com/Leddfoot/stats-vinmonopolet/issues"
+  },
+  "homepage": "https://github.com/Leddfoot/stats-vinmonopolet#readme"
 }

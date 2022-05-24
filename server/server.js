@@ -3,7 +3,10 @@ const app = express()
 const path = require('path')
 
 const https = require("https");
-const http = require('http') //use this if your api uses http and not https
+// const http = require('http') //use this if your api uses http and not https
+
+const config = require('./config')  //, use this for webpack testing
+const key = config.vinMonopoletAPIKeyPrimary //, use this for webpack testing
 
 const publicDirectoryPath = path.join(__dirname, '../public')
 console.log('In order for this to work, your starting page must be named index.html and must be here:', publicDirectoryPath);
@@ -18,13 +21,14 @@ app.get('/returnSomeJSON', (req, res) => {
 })
 
 app.get('/nodehttp', (req, res) => {
-    // console.log('req.query: ', req.query);
+    console.log('req.query: ', req.query);
 
 
     const options = {
         json: true,
         headers: {
-            'Ocp-Apim-Subscription-Key': 'YOUR API KEY HERE'
+            // 'Ocp-Apim-Subscription-Key': 'YOUR API KEY HERE'
+            'Ocp-Apim-Subscription-Key': key
         }
     };
 
@@ -35,7 +39,8 @@ app.get('/nodehttp', (req, res) => {
     }    
 
     const fetchData = () => {
-        https.get('https://apis.vinmonopolet.no/stores/v0/details?storeNameContains=holmen', options, (res) => {
+        // https.get('https://apis.vinmonopolet.no/stores/v0/details?storeNameContains=holmen', options, (res) => {
+        https.get('https://apis.vinmonopolet.no/products/v0/monthly-sales-per-store?fromSalesMonth=2020-02&toSalesMonth=2020-04&fromStoreId=135&toStoreId=200&productId=3339706&maxResults=5', options, (res) => {
             console.log(' response statusCode:', res.statusCode);
             // console.log('response headers:', res.headers);
 
